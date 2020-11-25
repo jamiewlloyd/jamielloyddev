@@ -67,7 +67,7 @@ header {
     overflow: hidden;
     transform: translateY(-50%);
     height: 65px;
-    color: #313131
+    color: #313131;
 }
 
 .line2 {
@@ -129,9 +129,6 @@ header {
 .scroll h2{
     font-size: 1em;
 }
-.scrollarrow {
-    height: 5vh;    
-}
 
 #mainContainer {
     width: 100%;
@@ -143,32 +140,59 @@ header {
     align-items: center;
     background-color: white;
     color: #313131;
+    
 }
 
 .port_link {
     font-size: 80px;
-    font-weight: 900;
+    font-weight: bold;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .pafor {
-    transition: 0.5s;
-    color: #ffdc52;
+    letter-spacing:0.2em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 8px 8px #f1e425;
 }
 
 .pafor:hover {
-    color: #313131;
+    -webkit-text-fill-color: white;
 }
+
 .flower {
-    color: #f75edd;
+    letter-spacing:0.2em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 8px 8px #f75edd;
+}
+.flower:hover {
+    -webkit-text-fill-color: white;
 }
 
 .taski {
-    color: #8865fa;
+    letter-spacing:0.2em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 8px 8px #8865fa;
+}
+.taski:hover {
+    -webkit-text-fill-color: transparent;
 }
 .nook {
-    color: #43ca7e;
+    letter-spacing:0.2em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    text-shadow: 8px 8px #43ca7e;
 } 
+.nook:hover {
+    -webkit-text-fill-color: transparent;
+}
 
 #skillContainer {
     width: 100%;
@@ -187,6 +211,15 @@ header {
    font-size: 50px;
    font-weight: 800;
 }
+.li2 {
+    padding: 10PX;
+    color: white;
+    background-color: #344e7e;
+}
+
+.li1{
+    color: black;
+}
 
 .totop {
     display: grid;
@@ -197,9 +230,6 @@ header {
     grid-column: 1/4;
 }
 
-.toparrow {
-    margin-bottom: -8px;
-}
 
 .totop h2{
     font-size: 1em;
@@ -224,7 +254,7 @@ header {
     display: grid;
     justify-items: center;
     align-items: center;
-    width: 40%;
+    width: 30%;
 }
 #contactContainer img {
     width: 100%;
@@ -241,27 +271,14 @@ header {
     grid-column: 3;
 }
 
+@media screen and (max-width: 850px) {
+    .port_link {
+        font-size: 70px;
+    }
 
-
-#footer {
-    width: 100%;
-    height: 100px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    background-color: #313131;
-    color: white;
-    font-size: 15px;
-    text-align: center;
-}
-
-#footer p {
-    max-width: 80%;
-}
-
-.disclaim {
-    color: #6b6b6b;
-    font-size: 12px;
+    #contactContainer a {
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -307,15 +324,24 @@ header {
     }
     .scroll h2{
         font-size: 0.8em;
-    }
-    .scrollarrow {
-        height: 5vh;    
-    }
-    
+    }    
     .port_link {
-        font-size: 70px;
+        font-size: 65px;
+    }
+    .pafor {
+        text-shadow: 7px 7px #f1e425;
     }
     
+    .flower {
+         text-shadow: 7px 7px #f75edd;
+    }
+    
+    .taski {
+        text-shadow: 7px 7px #8865fa;
+    }
+    .nook {
+        text-shadow: 7px 7px #43ca7e;
+    } 
 }
 
 @media screen and (max-width: 650px) {
@@ -362,21 +388,56 @@ header {
     .scroll h2{
         font-size: 0.8em;
     }
-    .scrollarrow {
-        height: 5vh;    
-    }
+    
     .port_link {
-        font-size: 60px;
+        font-size: 50px;
     }
+    .pafor {
+        -webkit-text-stroke-width: 2.5px;
+        text-shadow: 5px 5px #f1e425;
+    }
+
+    .flower {
+        -webkit-text-stroke-width: 2.5px;
+        text-shadow: 5px 5px #f75edd;
+    }
+
+    .taski {
+        -webkit-text-stroke-width: 2.5px;
+        text-shadow: 5px 5px #8865fa;
+    }
+    .nook {
+        -webkit-text-stroke-width: 2.5px;
+        text-shadow: 5px 5px #43ca7e;
+    } 
     .skills {
         font-size: 40px;
-     }
+    }
 }
 
 @media screen and (max-width: 550px) {
     .port_link {
-        font-size: 48px;
+        font-size: 38px;
     }
+
+    .pafor {
+        -webkit-text-stroke-width: 2px;
+        text-shadow: 3.5px 3.5px #f1e425;
+    }
+    
+    .flower {
+        -webkit-text-stroke-width: 2px;
+         text-shadow: 3.5px 3.5px #f75edd;
+    }
+    
+    .taski {
+        -webkit-text-stroke-width: 2px;
+        text-shadow: 3.5px 3.5px #8865fa;
+    }
+    .nook {
+        -webkit-text-stroke-width: 2px;
+        text-shadow: 3.5px 3.5px #43ca7e;
+    } 
 
     #contactContainer {
         width: 100%;
@@ -440,9 +501,32 @@ header {
         }
     }
     .port_link {
-        font-size: 35px;
+        font-size: 30px;
     }
+
+    .pafor {
+        -webkit-text-stroke-width: 1.5px;
+        text-shadow: 3px 3px #f1e425;
+    }
+    
+    .flower {
+        -webkit-text-stroke-width: 1.5px;
+         text-shadow: 3px 3px #f75edd;
+    }
+    
+    .taski {
+        -webkit-text-stroke-width: 1.5px;
+        text-shadow: 3px 3px #8865fa;
+    }
+    .nook {
+        -webkit-text-stroke-width: 1.5px;
+        text-shadow: 3px 3px #43ca7e;
+    } 
     .skills {
         font-size: 30px;
      }
+
+     #contactContainer a {
+        width: 30%;
+    }
 }
