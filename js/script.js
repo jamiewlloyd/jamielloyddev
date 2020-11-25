@@ -3,7 +3,7 @@ const move = document.querySelectorAll(".scroll").forEach(item => {
 });
 
 const toTop = document.querySelector(".totop");
-const header = document.getElementById("header");
+const header = document.querySelector(".header");
 
 toTop.addEventListener("click", backToTop);
 
