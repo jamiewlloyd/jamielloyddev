@@ -73,7 +73,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    height: -webkit-fill-available;
+    height: calc(var(--vh, 1vh) * 100);
     color: #252525;
     font-family: 'Montserrat', sans-serif;
 }
@@ -150,6 +150,7 @@ body {
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-rows: 70px auto auto auto auto 70px;
     justify-items: center;
@@ -227,6 +228,7 @@ body {
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     justify-items: center;
@@ -277,7 +279,8 @@ body {
 #about_header {
     width: 100%;
     max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-rows: 70px auto auto 70px;
     grid-template-columns: 1fr 2fr;
@@ -324,7 +327,8 @@ body {
 #experienceContainer {
     width: 100%;
     max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-rows: 70px auto auto 70px;
     justify-items: center;
@@ -357,7 +361,8 @@ body {
 #interestsContainer {
     width: 100%;
     max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     display: grid;
     grid-template-rows: 70px auto auto 70px;
     justify-items: center;
