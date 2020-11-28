@@ -121,6 +121,7 @@ body {
     justify-items: center;
     height: 10px;
     cursor: pointer;
+    z-index: 100;
 }
 
 .scroll h2{
