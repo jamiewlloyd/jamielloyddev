@@ -457,6 +457,19 @@ grid-column: 2;
 }
 
 @media screen and (max-width: 770px) {
+    .skills {
+        font-size: 30px;
+    }
+    .skills2 {
+        font-size: 30px;
+    }
+    .li1{
+        -webkit-text-stroke-width: 2px;
+    }
+    
+    .li4{
+        -webkit-text-stroke-width: 2px;
+    }
     .more {
         font-size: 20px;
     }
@@ -550,7 +563,17 @@ grid-column: 2;
         text-shadow: 5px 5px #43ca7e;
     } 
     .skills {
-        font-size: 40px;
+        font-size: 20px;
+    }
+    .skills2 {
+        font-size: 20px;
+    }
+    .li1{
+        -webkit-text-stroke-width: 1px;
+    }
+    
+    .li4{
+        -webkit-text-stroke-width: 1px;
     }
 }
 
@@ -664,10 +687,14 @@ grid-column: 2;
         text-shadow: 3px 3px #43ca7e;
     } 
     .skills {
-        font-size: 30px;
+        font-size: 15px;
+     }
+
+     .skills2 {
+        font-size: 15px;
      }
 
      .li1{
-        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-width: 1px;
     }
 }
