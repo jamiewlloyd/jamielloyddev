@@ -121,6 +121,7 @@ body {
     color: black;
     grid-row: 4;
     grid-column: 1/4;
+    text-align: center;
 }
 
 #header .scroll {
@@ -366,16 +367,43 @@ body {
     text-shadow: 6px 6px #43ca7e;
 }
 
+@media screen and (max-width: 1000px) {
+    .job {
+        font-size: 50px;
+    }
+}
+
 @media screen and (max-width: 850px) {
+    .job {
+        font-size: 45px;
+    }
+    .name {
+        font-size: 80px;
+    }
     .port_link {
         font-size: 70px;
     }
 }
 
 @media screen and (max-width: 770px) {
+    .more {
+        font-size: 20px;
+    }
+    .contact {
+        width: 200px;
+    }
+    .social img {
+        height: 40px;
+    }
+    .job {
+        font-size: 40px;
+    }
     .scroll h2{
         font-size: 0.8em;
     }    
+    .totop h2{
+        font-size: 0.8em;
+    }
     .port_link {
         font-size: 65px;
     }
@@ -396,6 +424,9 @@ body {
 }
 
 @media screen and (max-width: 650px) {
+    .job {
+        font-size: 35px;
+    }
     .scroll h2{
         font-size: 0.8em;
     }
@@ -452,6 +483,39 @@ body {
 }
 
 @media screen and (max-width: 400px) {
+    .more {
+        font-size: 12px;
+    }
+    .contact {
+        width: 120px;
+        padding: 9px;
+    }
+    .social img {
+        height: 30px;
+    }
+    .job {
+        font-size: 30px;
+    }
+    .name {
+        font-size: 60px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-transform: translateX(6px) translateY(6px);
+        transform: translateX(6px) translateY(6px);
+        -webkit-text-stroke-color: rgb(0, 0, 0);
+        text-shadow: 0px 0px rgb(184, 37, 37);
+    }
+    
+    @keyframes shadow {
+        0% {
+            -webkit-transform: translateX(6px) translateY(6px);
+            transform: translateX(6px) translateY(6px);
+            text-shadow: 0px 0px rgb(184, 37, 37);
+        }
+        
+        100% {
+            text-shadow: 6px 6px rgb(184, 37, 37);
+        }
+    }
     .port_link {
         font-size: 30px;
     }
@@ -477,4 +541,8 @@ body {
     .skills {
         font-size: 30px;
      }
+
+     .li1{
+        -webkit-text-stroke-width: 2px;
+    }
 }
