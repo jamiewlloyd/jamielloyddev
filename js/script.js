@@ -9,7 +9,7 @@ toTop.addEventListener("click", backToTop);
 
 function nextContainer(event) {
     let nextElement = event.target.parentNode.parentNode.nextElementSibling;
-    nextElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    nextElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
 function backToTop() {
