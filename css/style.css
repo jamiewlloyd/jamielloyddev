@@ -229,7 +229,7 @@ body {
 .li2 {
     padding: 10PX;
     color: white;
-    background-color: #000000;
+    background-color: #b85b25;
     letter-spacing:0.1em;
 }
 
@@ -323,7 +323,7 @@ body {
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: rgb(0, 0, 0);
-    text-shadow: 6px 6px rgb(184, 91, 37);
+    text-shadow: 6px 6px #b85b25;
 }
 
 #interestsContainer {
