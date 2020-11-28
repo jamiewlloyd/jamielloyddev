@@ -23,6 +23,7 @@ time, mark, audio, video {
 }
 
 .no_select {
+    -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -43,6 +44,7 @@ body {
 
 #nav {
     height: 10vh;
+    height: calc(var(--vh, 1vh) * 10);
     width: 100%;
     display: grid;
     position: fixed;
