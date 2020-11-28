@@ -5,14 +5,17 @@ const move = document.querySelectorAll(".scroll").forEach(item => {
 const toTop = document.querySelector(".totop");
 const header = document.querySelector(".header");
 
+
 toTop.addEventListener("click", backToTop);
 
 function nextContainer(event) {
+    setDocHight();
     let nextElement = event.target.parentNode.parentNode.nextElementSibling;
-    nextElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    nextElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function backToTop() {
+    setDocHight();
     header.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -26,5 +29,7 @@ function setDocHight() {
 window.addEventListener('resize', function () {
     setDocHight();
 })
+
+
 
 setDocHight();
