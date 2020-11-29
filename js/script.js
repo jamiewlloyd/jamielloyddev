@@ -1,35 +1,40 @@
-const move = document.querySelectorAll(".scroll").forEach(item => {
-    item.addEventListener("click", nextContainer);
-});
+// Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+    // IE Fallback
+    function (callback) { window.setTimeout(callback, 1000 / 60) };
+var elementsToShow = document.querySelectorAll('.show-on-scroll');
 
-const toTop = document.querySelector(".totop");
-const header = document.querySelector(".header");
+function loop() {
 
+    elementsToShow.forEach(function (element) {
+        if (isElementInViewport(element)) {
+            element.classList.add('is-visible');
+        } else {
+            element.classList.remove('is-visible');
+        }
+    });
 
-toTop.addEventListener("click", backToTop);
-
-function nextContainer(event) {
-    setDocHight();
-    let nextElement = event.target.parentNode.parentNode.nextElementSibling;
-    nextElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scroll(loop);
 }
 
-function backToTop() {
-    setDocHight();
-    header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+// Call the loop for the first time
+loop();
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+    // special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+    var rect = el.getBoundingClientRect();
+    return (
+        (rect.top <= 0
+            && rect.bottom >= 0)
+        ||
+        (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+        ||
+        (rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
 }
-
-//Get the viewport height and multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// the value in the --vh custom property to the root of the document
-function setDocHight() {
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-window.addEventListener('resize', function () {
-    setDocHight();
-})
-
-
-
-setDocHight();
