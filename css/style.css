@@ -43,44 +43,37 @@ body {
 }
 
 #nav {
-    height: 90px;
+    height: 70px;
     width: 100%;
     display: grid;
+    align-items: center;
     position: fixed;
     z-index: 300;
+    background-color: black;
 }
 
 .more {
     font-size: 25px;
     font-weight: bold;
     letter-spacing:0.1em;
-    color: black;
+    color: white;
     grid-row: 1;
-    align-self: start;
     justify-self: start;
-    padding: 20px;
+    padding: 0 20px;
     text-decoration: none;
-    opacity: 0.3;
-}
-.more:hover {
-    opacity: 1;
 }
 .contact {
-    align-self: start;
+
     justify-self: end;
     grid-row: 1;
-    padding: 20px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-around;
-    width: 250px;
-    opacity: 0.3;
+    width: 200px;
 }
 
-.contact:hover {
-    opacity: 1;
-}
-.social {
-    filter: brightness(0);
+.social img{
+    filter: brightness(100);
 }
 
 
@@ -144,7 +137,7 @@ body {
     text-align: center;
 }
 .social img {
-    height: 50px;
+    height: 45px;
 }
 
 #mainContainer {
@@ -493,10 +486,26 @@ font-weight: bold;
         font-size: 50px;
         -webkit-text-stroke-width: 2px;
     }
+    .port_link {
+        border: 3px solid black;
+     }
 }
 
 @media screen and (max-width: 550px) {
-    
+    #nav {
+        height: 60px;
+    }
+    .more {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    .contact{
+        padding: 0 8px;
+        width: 170px;
+    }
+    .social img{
+        height: 35px;
+    }
     #about_header {
         grid-template-rows: 50px auto auto 70px;
         grid-template-columns: 1fr 1fr;
@@ -568,16 +577,26 @@ font-weight: bold;
         box-shadow: 6px 6px  #43ca7e;
     }
 }
+@media screen and (max-width: 450px) {
+    .more {
+        font-size: 17px;
+        padding: 0 15px;
+    }
+}
 
 @media screen and (max-width: 400px) {
+    #nav {
+        height: 50px;
+    }
     .more {
         font-size: 12px;
+        padding: 0 15px;
     }
-    .contact {
-        width: 120px;
-        padding: 9px;
+    .contact{
+        padding: 0 8px;
+        width: 140px;
     }
-    .social img {
+    .social img{
         height: 30px;
     }
     .job {
@@ -625,4 +644,5 @@ font-weight: bold;
     .link4 {
         box-shadow: 5px 5px  #43ca7e;
     }
+
 }
